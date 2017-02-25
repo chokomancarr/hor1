@@ -7,7 +7,7 @@ public class ItemDrop : MonoBehaviour {
     public float msgDelay;
 
     float dh;
-    bool canInter;
+    bool canInter, inView;
     GUIStyle style;
 
     void Start ()
@@ -22,11 +22,10 @@ public class ItemDrop : MonoBehaviour {
     {
         if (Event.current.type == EventType.repaint && canInter)
         {
-            Vector3 p = Ppl.instance.cam.WorldToScreenPoint(transform.position);
-            if (p.z > 0)
-            {
-                GUI.DrawTexture(new Rect(p.x - dh * 0.5f, Screen.height - p.y - dh * 0.5f, dh * 0.7f, dh), Manager.instance.tex_black);
-                GUI.Label(new Rect(p.x - dh * 0.5f, Screen.height - p.y - dh * 0.5f, dh, dh), InKeys.Nm("F"), style);
+            Vector3 p = Ppl.instance.cam.WorldToViewportPoint(transform.position);
+            inView = p.z > 0 && p.x > 0 && p.y > 0 && p.x < 1 && p.y < 1;
+            if (inView) {
+                HUD.instance.SetF(p);
             }
         }
     }

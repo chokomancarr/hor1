@@ -18,6 +18,7 @@ public class Interactable : MonoBehaviour {
     }
 
     void Start () {
+        Cam.preRendDels.Add(PreRend);
         dh = Screen.height * 0.05f;
         col = GetComponent<Collider>();
         style = new GUIStyle();
@@ -27,7 +28,7 @@ public class Interactable : MonoBehaviour {
 
     void Update ()
     {
-        if (canInter && inView && Input.GetKeyDown(InKeys.Key("E")))
+        if (canInter && Input.GetKeyDown(InKeys.Key("E")))
         {
             col.enabled = false;
             canInter = false;
@@ -36,16 +37,15 @@ public class Interactable : MonoBehaviour {
         }
     }
 
-    void OnGUI ()
+    void PreRend ()
     {
-        if (Event.current.type == EventType.repaint && canInter)
+        if (canInter)
         {
-            Vector3 p = Ppl.instance.cam.WorldToScreenPoint(transform.TransformPoint(buttonPos));
-            inView = p.z > 0 && p.x > 0 && p.y > 0 && p.x < Screen.width && p.y < Screen.height;
+            Vector3 p = Ppl.instance.cam.WorldToViewportPoint(transform.TransformPoint(buttonPos));
+            inView = p.z > 0 && p.x > 0 && p.y > 0 && p.x < 1 && p.y < 1;
             if (inView)
             {
-                GUI.DrawTexture(new Rect(p.x - dh * 0.5f, Screen.height - p.y - dh * 0.5f, dh * 0.7f, dh), Manager.instance.tex_black);
-                GUI.Label(new Rect(p.x - dh * 0.5f, Screen.height - p.y - dh * 0.5f, dh, dh), InKeys.Nm("E"), style);
+                HUD.instance.SetE(p);
             }
         }
     }

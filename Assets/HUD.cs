@@ -1,25 +1,57 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
-using System.Collections.Generic;
 
 public class HUD : MonoBehaviour {
     public static HUD instance;
-    public string talkMsg;
     public float talkTime;
+    public Text talkUI;
 
+    public Camera uiCam;
 
-    public GUIStyle style;
-    
+    public RectTransform E, F;
+    public Text ET, FT;
+    int Et = -1, Ft = -1;
+
+    public RectTransform LT, RB;
+    public Vector2 lt, rb;
+
+    void Start () {
+        lt = LT.anchoredPosition;
+        rb = RB.anchoredPosition;
+        LT.gameObject.SetActive(false);
+        RB.gameObject.SetActive(false);
+    }
+
+    public Vector2 CamToCanvas (Vector3 p) {
+        p.y = ((p.y - 0.5f) * Screen.width / Screen.height) + 0.5f;
+        return new Vector2(Mathf.Lerp(lt.x, rb.x, p.x), Mathf.Lerp(rb.y, lt.y, p.y));
+    }
+
+    public void SetE (Vector3 p) {
+        E.gameObject.SetActive(true);
+        E.anchoredPosition = CamToCanvas(p);
+        ET.text = InKeys.Nm("E");
+        Et = 1;
+    }
+    public void SetF(Vector3 p) {
+        F.gameObject.SetActive(true);
+        F.anchoredPosition = CamToCanvas(p);
+        FT.text = InKeys.Nm("F");
+        Ft = 1;
+    }
+
     void Awake ()
     {
         if (!instance)
             instance = this;
-        style.richText = true;
+
+        Talk("Hello from the other side!");
     }
 
     public void Talk(string m)
     {
-        talkMsg = m;
+        talkUI.text = m;
         talkTime = 0.07f * m.Length + 2;
     }
     public void Talk(string m, float d)
@@ -29,36 +61,28 @@ public class HUD : MonoBehaviour {
     IEnumerator DoTalk(string m, float d)
     {
         yield return new WaitForSeconds(d);
-        talkMsg = m;
+        talkUI.text = m;
         talkTime = 0.07f * m.Length + 2;
     }
 
-    void Update ()
-    {
-        if (talkTime > 0)
+    void Update() {
+        if (talkTime > 0) {
             talkTime -= Time.deltaTime;
-    }
+            talkUI.enabled = true;
+            talkUI.color = new Color(1, 1, 1, talkTime*2);
+        }
+        else
+            talkUI.enabled = false;
 
-    void OnGUI ()
-    {
-        if (Event.current.type == EventType.repaint)
-        {
-            int w = Ppl.instance.inventoryWeps[Ppl.instance.usingWep];
-            if (!Ppl.instance.rigOverride && w >= 0 && Ppl.instance.bullets[w].all >= 0)
-            {
-                style.alignment = TextAnchor.MiddleRight;
-                style.fontSize = (int)(Screen.height * 0.04f);
-                GUI.color = Color.white;
-                GUI.Label(new Rect(Screen.width*0.9f, Screen.height*0.85f, Screen.width*0.08f, Screen.height*0.1f), Ppl.instance.bullets[w].curr + "/" + Ppl.instance.bullets[w].all, style);
-            }
-
-            if (talkTime > 0)
-            {
-                style.alignment = TextAnchor.MiddleCenter;
-                style.fontSize = (int)(Screen.height*0.02f);
-                GUI.color = new Color(1, 1, 1, talkTime*3);
-                GUI.Label(new Rect(0, Screen.height*0.7f, Screen.width, Screen.height*0.2f), talkMsg, style);
-            }
+        if (Et >= 0) {
+            Et--;
+            if (Et < 0)
+                E.gameObject.SetActive(false);
+        }
+        if (Ft >= 0) {
+            Ft--;
+            if (Ft < 0)
+                F.gameObject.SetActive(false);
         }
     }
 }
