@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.VR;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Ppl : MonoBehaviour {
     public static Ppl instance;
+    public bool vr;
 
     public Rigidbody rig;
     public Animator anim;
     public Camera cam;
+    public Transform camPivot;
     public Transform rigPivot;
     public Transform rigItem;
     public Transform camOverrideTr;
@@ -24,6 +27,7 @@ public class Ppl : MonoBehaviour {
 
     public List<int> items;
 
+    public Vector3 pvPos;
     public float preOverride;
     public Vector3 preOPos;
     public Quaternion preORot;
@@ -59,6 +63,7 @@ public class Ppl : MonoBehaviour {
         camDirX = transform.eulerAngles.y;
         camDirY = cam.transform.localEulerAngles.x;
         runDist = 5;
+        pvPos = camPivot.transform.localPosition;
     }
 
     void Update()
@@ -130,39 +135,54 @@ public class Ppl : MonoBehaviour {
         }
     }
 
-    void LateUpdate()
-    {
-        if (!rigOverride)
-        {
-            rigPivot.rotation = cam.transform.rotation;
-            rigPivot.Rotate(0, 180, -90);
+    void LateUpdate() {
+        if (!vr) {
+            if (!rigOverride) {
+                rigPivot.rotation = cam.transform.rotation;
+                rigPivot.Rotate(0, 180, -90);
+            }
+            else {
+                if (preOverride < 1) {
+                    transform.position = Vector3.Lerp(preOPos, overrideTr.position, preOverride);
+                    cam.transform.localRotation = Quaternion.Lerp(cam.transform.localRotation, Quaternion.identity, Time.deltaTime * 10);
+                    transform.rotation = Quaternion.Lerp(preORot, overrideTr.rotation, preOverride);
+                    rigPivot.localRotation = Quaternion.Lerp(rigPivot.localRotation, Quaternion.Euler(0, 90, 0), preOverride);
+                    preOverride += Time.deltaTime * 2;
+                    if (preOverride >= 0)
+                        UseWep(-1);
+                }
+                else {
+                    transform.position = overrideTr.position;
+                    transform.rotation = overrideTr.rotation;
+                    rigPivot.localRotation = Quaternion.Euler(0, 90, 0);
+
+                    cam.transform.position = camOverrideTr.position;
+                    cam.transform.rotation = camOverrideTr.rotation;
+                    cam.transform.Rotate(0, -90, -90);
+                }
+            }
         }
-        else
-        {
-            if (preOverride < 1)
-            {
+
+        if (!rigOverride) {
+
+        }
+        else {
+            if (preOverride < 1) {
                 transform.position = Vector3.Lerp(preOPos, overrideTr.position, preOverride);
-                cam.transform.localRotation = Quaternion.Lerp(cam.transform.localRotation, Quaternion.identity, Time.deltaTime*10);
                 transform.rotation = Quaternion.Lerp(preORot, overrideTr.rotation, preOverride);
-                rigPivot.localRotation = Quaternion.Lerp(rigPivot.localRotation, Quaternion.Euler(0, 90, 0), preOverride);
-                preOverride += Time.deltaTime*2;
+                preOverride += Time.deltaTime * 2;
                 if (preOverride >= 0)
                     UseWep(-1);
             }
-            else
-            {
+            else {
                 transform.position = overrideTr.position;
                 transform.rotation = overrideTr.rotation;
                 rigPivot.localRotation = Quaternion.Euler(0, 90, 0);
-
-                cam.transform.position = camOverrideTr.position;
-                cam.transform.rotation = camOverrideTr.rotation;
-                cam.transform.Rotate(0, -90, -90);
             }
         }
     }
 
-    public void Override (Transform t, GameObject r, int id, Interactable i)
+public void Override (Transform t, GameObject r, int id, Interactable i)
     {
         StartCoroutine(DoOverride(t, r, id, i));
     }
