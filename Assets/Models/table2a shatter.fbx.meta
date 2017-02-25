@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: a82ea3d8bca1fbe41afd674df0cacdd5
+timeCreated: 1487898535
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: table2a_cell
+    100004: table2a_cell.001
+    100006: table2a_cell.002
+    100008: table2a_cell.003
+    100010: table2a_cell.004
+    100012: table2a_cell.005
+    100014: table2a_cell.006
+    100016: table2a_cell.007
+    100018: table2a_cell.008
+    100020: table2a_cell.009
+    100022: table2a_cell.010
+    100024: table2a_cell.011
+    100026: table2a_cell.012
+    100028: table2a_cell.013
+    100030: table2a_cell.014
+    100032: table2a_cell.015
+    100034: table2a_cell.016
+    100036: table2a_cell.017
+    100038: table2a_cell.018
+    100040: table2a_cell.019
+    100042: table2a_cell.020
+    100044: table2a_cell.021
+    100046: table2a_cell.022
+    100048: table2a_cell.023
+    100050: table2a_cell.024
+    400000: //RootNode
+    400002: table2a_cell
+    400004: table2a_cell.001
+    400006: table2a_cell.002
+    400008: table2a_cell.003
+    400010: table2a_cell.004
+    400012: table2a_cell.005
+    400014: table2a_cell.006
+    400016: table2a_cell.007
+    400018: table2a_cell.008
+    400020: table2a_cell.009
+    400022: table2a_cell.010
+    400024: table2a_cell.011
+    400026: table2a_cell.012
+    400028: table2a_cell.013
+    400030: table2a_cell.014
+    400032: table2a_cell.015
+    400034: table2a_cell.016
+    400036: table2a_cell.017
+    400038: table2a_cell.018
+    400040: table2a_cell.019
+    400042: table2a_cell.020
+    400044: table2a_cell.021
+    400046: table2a_cell.022
+    400048: table2a_cell.023
+    400050: table2a_cell.024
+    2300000: table2a_cell
+    2300002: table2a_cell.001
+    2300004: table2a_cell.002
+    2300006: table2a_cell.003
+    2300008: table2a_cell.004
+    2300010: table2a_cell.005
+    2300012: table2a_cell.006
+    2300014: table2a_cell.007
+    2300016: table2a_cell.008
+    2300018: table2a_cell.009
+    2300020: table2a_cell.010
+    2300022: table2a_cell.011
+    2300024: table2a_cell.012
+    2300026: table2a_cell.013
+    2300028: table2a_cell.014
+    2300030: table2a_cell.015
+    2300032: table2a_cell.016
+    2300034: table2a_cell.017
+    2300036: table2a_cell.018
+    2300038: table2a_cell.019
+    2300040: table2a_cell.020
+    2300042: table2a_cell.021
+    2300044: table2a_cell.022
+    2300046: table2a_cell.023
+    2300048: table2a_cell.024
+    3300000: table2a_cell
+    3300002: table2a_cell.001
+    3300004: table2a_cell.002
+    3300006: table2a_cell.003
+    3300008: table2a_cell.004
+    3300010: table2a_cell.005
+    3300012: table2a_cell.006
+    3300014: table2a_cell.007
+    3300016: table2a_cell.008
+    3300018: table2a_cell.009
+    3300020: table2a_cell.010
+    3300022: table2a_cell.011
+    3300024: table2a_cell.012
+    3300026: table2a_cell.013
+    3300028: table2a_cell.014
+    3300030: table2a_cell.015
+    3300032: table2a_cell.016
+    3300034: table2a_cell.017
+    3300036: table2a_cell.018
+    3300038: table2a_cell.019
+    3300040: table2a_cell.020
+    3300042: table2a_cell.021
+    3300044: table2a_cell.022
+    3300046: table2a_cell.023
+    3300048: table2a_cell.024
+    4300000: table2a_cell.024
+    4300002: table2a_cell.023
+    4300004: table2a_cell.022
+    4300006: table2a_cell.021
+    4300008: table2a_cell.020
+    4300010: table2a_cell.019
+    4300012: table2a_cell.018
+    4300014: table2a_cell.017
+    4300016: table2a_cell.016
+    4300018: table2a_cell.015
+    4300020: table2a_cell.014
+    4300022: table2a_cell.013
+    4300024: table2a_cell.012
+    4300026: table2a_cell.011
+    4300028: table2a_cell.010
+    4300030: table2a_cell.009
+    4300032: table2a_cell.008
+    4300034: table2a_cell.007
+    4300036: table2a_cell.006
+    4300038: table2a_cell.005
+    4300040: table2a_cell.004
+    4300042: table2a_cell.003
+    4300044: table2a_cell.002
+    4300046: table2a_cell.001
+    4300048: table2a_cell
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
