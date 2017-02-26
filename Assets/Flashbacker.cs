@@ -4,7 +4,14 @@ public class Flashbacker : MonoBehaviour {
     public GameObject fire;
     public Light l;
     public GameObject halo;
-    public MovieTexture cdTex;
+    public float buttonPos;
+
+    bool canInter = false, inView = false;
+
+    void Start()
+    {
+        Cam.preRendDels.Add(PreRend);
+    }
 
     public void Begin()
     {
@@ -22,12 +29,36 @@ public class Flashbacker : MonoBehaviour {
         fire.SetActive(true);
     }
 
-    void OnTriggerStay ()
+    void PreRend()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (canInter)
         {
+            Vector3 p = Ppl.instance.cam.WorldToViewportPoint(transform.position + new Vector3(0, buttonPos, 0));
+            inView = p.z > 0 && p.x > 0 && p.y > 0 && p.x < 1 && p.y < 1;
+            if (inView)
+            {
+                HUD.instance.SetE(p);
+            }
+        }
+    }
+
+    void Update ()
+    {
+        if (canInter && inView && Input.GetKeyDown(KeyCode.E))
+        {
+            canInter = false;
             Begin();
             //Finish();
         }
+    }
+
+    void OnTriggerEnter ()
+    {
+        canInter = true;
+    }
+
+    void OnTriggerExit ()
+    {
+        canInter = false;
     }
 }

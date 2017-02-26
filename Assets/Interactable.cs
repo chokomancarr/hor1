@@ -7,6 +7,8 @@ public class Interactable : MonoBehaviour {
     public Vector3 buttonPos;
 
     public bool canInter, inView;
+    public OnE one;
+
     GUIStyle style;
     float dh;
 

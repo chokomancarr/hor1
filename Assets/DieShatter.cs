@@ -4,6 +4,7 @@ public class DieShatter : MonoBehaviour {
     public Shatterer s;
 
 	void OnDestroy () {
-        s.Shatter();
+        if (s)
+            s.Shatter();
 	}
 }

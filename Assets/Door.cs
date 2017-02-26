@@ -7,6 +7,7 @@ public class Door : Interactable {
 
     public AudioSource s;
     public AudioClip closeClip;
+    public Door other;
 
     void Awake ()
     {

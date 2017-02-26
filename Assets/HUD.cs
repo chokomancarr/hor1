@@ -13,18 +13,28 @@ public class HUD : MonoBehaviour {
     public Text ET, FT;
     int Et = -1, Ft = -1;
 
-    public RectTransform LT, RB;
+    public RectTransform LT, RB, LT2, RB2; //2 for VR
     public Vector2 lt, rb;
 
     void Start () {
-        lt = LT.anchoredPosition;
-        rb = RB.anchoredPosition;
+        if (Ppl.instance.vr)
+        {
+            lt = LT2.anchoredPosition;
+            rb = RB2.anchoredPosition;
+        }
+        else
+        {
+            lt = LT.anchoredPosition;
+            rb = RB.anchoredPosition;
+        }
         LT.gameObject.SetActive(false);
         RB.gameObject.SetActive(false);
+        LT2.gameObject.SetActive(false);
+        RB2.gameObject.SetActive(false);
     }
 
     public Vector2 CamToCanvas (Vector3 p) {
-        p.y = ((p.y - 0.5f) * Screen.width / Screen.height) + 0.5f;
+        if (Ppl.instance.vr) p.y = ((p.y - 0.5f) * Screen.width / Screen.height) + 0.5f;
         return new Vector2(Mathf.Lerp(lt.x, rb.x, p.x), Mathf.Lerp(rb.y, lt.y, p.y));
     }
 

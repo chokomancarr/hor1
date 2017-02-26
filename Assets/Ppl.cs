@@ -8,6 +8,7 @@ public class Ppl : MonoBehaviour {
     public bool vr;
 
     public Rigidbody rig;
+    public Collider col;
     public Animator anim;
     public Camera cam;
     public Transform camPivot;
@@ -55,6 +56,7 @@ public class Ppl : MonoBehaviour {
     void Awake()
     {
         instance = this;
+        VRSettings.enabled = vr;
     }
 
     void Start() {
@@ -163,10 +165,7 @@ public class Ppl : MonoBehaviour {
             }
         }
 
-        if (!rigOverride) {
-
-        }
-        else {
+        if (rigOverride) {
             if (preOverride < 1) {
                 transform.position = Vector3.Lerp(preOPos, overrideTr.position, preOverride);
                 transform.rotation = Quaternion.Lerp(preORot, overrideTr.rotation, preOverride);
@@ -189,6 +188,7 @@ public void Override (Transform t, GameObject r, int id, Interactable i)
 
     IEnumerator DoOverride(Transform t, GameObject r, int id, Interactable i)
     {
+        if (i.one) i.one.DoSt();
         int wo = usingWep + 0;
         rigOverride = true;
         preOverride = 0;
@@ -196,7 +196,10 @@ public void Override (Transform t, GameObject r, int id, Interactable i)
         overrideReplace = r;
         preOPos = transform.position;
         preORot = transform.rotation;
+        rig.isKinematic = true;
+        col.enabled = false;
         yield return new WaitForSeconds(0.5f);
+        if (i.one) i.one.Do5();
         overrideId = id;
         overrideReplace.SetActive(false);
         targets[id].o.SetActive(true);
@@ -231,11 +234,15 @@ public void Override (Transform t, GameObject r, int id, Interactable i)
         if (targets[id].o)
             targets[id].o.SetActive(false);
         yield return new WaitForSeconds(Time.deltaTime*2);
+        if (i.one) i.one.DoEnd();
         rigOverride = false;
         cam.transform.localRotation = Quaternion.identity;
         camDirX = transform.eulerAngles.y;
         camDirY = 0;
         UseWep(wo);
+        transform.Translate(targets[id].off);
+        rig.isKinematic = false;
+        col.enabled = true;
         if (!gotWep)
         {
             i.Reset();
@@ -246,6 +253,8 @@ public void Override (Transform t, GameObject r, int id, Interactable i)
                     break;
             }
         }
+        else if (targets[id].res)
+            i.Reset();
     }
 
     public void UseWep (int i, bool show = false)
@@ -285,4 +294,6 @@ public class OverrideTarget
     public AnimationClip clip;
     public int wep;
     public AnimationClip noWepClip;
+    public Vector3 off;
+    public bool res;
 }
