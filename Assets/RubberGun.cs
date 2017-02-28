@@ -15,7 +15,7 @@ public class RubberGun : Weapon {
         Ppl.instance.canChangeWep = false;
         canFire = false;
         rubber.SetActive(false);
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(1f);
         rubber.SetActive(true);
         yield return new WaitForSeconds(0.2f);
         canFire = true;

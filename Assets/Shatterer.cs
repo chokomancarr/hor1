@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shatterer : MonoBehaviour {
+public class Shatterer : Exec {
     public bool selfCol;
     public Transform ori, shatPar, forcePos;
     public Vector3 random, random2;
@@ -18,7 +18,7 @@ public class Shatterer : MonoBehaviour {
         }
 	}
 
-    public void Shatter ()
+    public override void Do ()
     {
         StartCoroutine(DoShatter());
     }

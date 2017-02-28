@@ -8,7 +8,7 @@ public class TalkTrigger1 : MonoBehaviour {
     bool t = false;
     void OnTriggerStay()
     {
-        if (!t && (Mathf.DeltaAngle(Ppl.instance.camDirX, transform.eulerAngles.y) < 20) && (Mathf.Abs(Ppl.instance.camDirY - angle) < 20))
+        if (!t && (Mathf.Abs(Mathf.DeltaAngle(Ppl.instance.camDirX, transform.eulerAngles.y)) < 20) && (Mathf.Abs(Ppl.instance.camDirY - angle) < 20))
         {
             HUD.instance.Talk(msg);
             t = true;

@@ -145,6 +145,7 @@ ModelImporter:
     7400020: prisedoor_r
     7400022: stuckdoor_r
     7400024: opendoor_l_dx
+    7400026: swissknife_fire
     9500000: //RootNode
     13700000: Plane
     13700002: Plane_002
@@ -159,7 +160,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -1586,6 +1587,134 @@ ModelImporter:
       takeName: opendoor_l_dx
       firstFrame: -1
       lastFrame: 318
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/item
+        weight: 1
+      - path: Armature/Bone/pivot
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_007
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_007/Bone_008
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_007/Bone_008/Bone_009
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_010
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_010/Bone_011
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_010/Bone_011/Bone_012
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_013
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_013/Bone_014
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_013/Bone_014/Bone_015
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_031
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_031/Bone_032
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_031/Bone_032/Bone_033
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/wep_l
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_019
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_019/Bone_020/Bone_021
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_022
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_022/Bone_023
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_022/Bone_023/Bone_024
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_025
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_025/Bone_026
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_025/Bone_026/Bone_027
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_028
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_028/Bone_029
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_028/Bone_029/Bone_030
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_034
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_034/Bone_035
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_034/Bone_035/Bone_036
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
+        weight: 1
+      - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: knife
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: swissknife_fire
+      takeName: swissknife_fire
+      firstFrame: -1
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -69,13 +69,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BarricadeZombieBreak.cs" />
     <Compile Include="Assets\Cam.cs" />
     <Compile Include="Assets\Clock.cs" />
-    <Compile Include="Assets\DieShatter.cs" />
+    <Compile Include="Assets\DieExec.cs" />
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\DoorCloser.cs" />
     <Compile Include="Assets\DxSpawnDoor.cs" />
     <Compile Include="Assets\DyingLight.cs" />
+    <Compile Include="Assets\Exec.cs" />
     <Compile Include="Assets\Flashbacker.cs" />
     <Compile Include="Assets\HUD.cs" />
     <Compile Include="Assets\InKeys.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\PplAud.cs" />
     <Compile Include="Assets\RubberGun.cs" />
     <Compile Include="Assets\Shatterer.cs" />
+    <Compile Include="Assets\SwissKnife.cs" />
     <Compile Include="Assets\TalkTrigger.cs" />
     <Compile Include="Assets\TalkTrigger1.cs" />
     <Compile Include="Assets\VRUIScaler.cs" />

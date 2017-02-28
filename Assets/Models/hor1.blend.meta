@@ -69,6 +69,15 @@ ModelImporter:
     100122: mouse_tut
     100124: tut1
     100126: table2a
+    100128: barricade1_line_break
+    100130: Plane_037
+    100132: Plane_038
+    100134: Plane_039
+    100136: Plane_040
+    100138: Plane_041
+    100140: Plane_042
+    100142: Plane_043
+    100144: Plane_044
     400000: barricade1_line
     400002: barricade1_line_001
     400004: barricade1_line_002
@@ -133,6 +142,15 @@ ModelImporter:
     400122: mouse_tut
     400124: tut1
     400126: table2a
+    400128: barricade1_line_break
+    400130: Plane_037
+    400132: Plane_038
+    400134: Plane_039
+    400136: Plane_040
+    400138: Plane_041
+    400140: Plane_042
+    400142: Plane_043
+    400144: Plane_044
     2300000: barricade1_line
     2300002: barricade1_line_001
     2300004: barricade1_line_002
@@ -196,6 +214,15 @@ ModelImporter:
     2300120: mouse_tut
     2300122: tut1
     2300124: table2a
+    2300126: barricade1_line_break
+    2300128: Plane_037
+    2300130: Plane_038
+    2300132: Plane_039
+    2300134: Plane_040
+    2300136: Plane_041
+    2300138: Plane_042
+    2300140: Plane_043
+    2300142: Plane_044
     3300000: barricade1_line
     3300002: barricade1_line_001
     3300004: barricade1_line_002
@@ -259,6 +286,15 @@ ModelImporter:
     3300120: mouse_tut
     3300122: tut1
     3300124: table2a
+    3300126: barricade1_line_break
+    3300128: Plane_037
+    3300130: Plane_038
+    3300132: Plane_039
+    3300134: Plane_040
+    3300136: Plane_041
+    3300138: Plane_042
+    3300140: Plane_043
+    3300142: Plane_044
     4300000: room0_shelf
     4300002: library
     4300004: block_001
@@ -322,6 +358,15 @@ ModelImporter:
     4300120: tut1
     4300122: mouse_tut
     4300124: table2a
+    4300126: barricade1_line_break
+    4300128: Plane_044
+    4300130: Plane_043
+    4300132: Plane_042
+    4300134: Plane_041
+    4300136: Plane_040
+    4300138: Plane_039
+    4300140: Plane_038
+    4300142: Plane_037
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -331,7 +376,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
