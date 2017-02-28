@@ -44,7 +44,7 @@ public class Flashbacker : MonoBehaviour {
 
     void Update ()
     {
-        if (canInter && inView && Input.GetKeyDown(KeyCode.E))
+        if (canInter && inView && Input.GetKeyDown(InKeys.Key("E")))
         {
             canInter = false;
             Begin();

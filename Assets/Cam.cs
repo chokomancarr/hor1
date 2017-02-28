@@ -30,6 +30,7 @@ public class Cam : MonoBehaviour {
         if (ppl.vr) {
             ppl.camPivot.transform.localPosition = ppl.pvPos - transform.localPosition;
             uiPivot.transform.localPosition = -uicam.transform.localPosition;
+            
             if (!ppl.rigOverride) {
                 ppl.cam.fieldOfView = Mathf.Lerp(ppl.cam.fieldOfView, 120, Time.deltaTime*5);
                 ppl.rigPivot.rotation = ppl.cam.transform.rotation;

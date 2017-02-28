@@ -25,6 +25,7 @@ public class Ppl : MonoBehaviour {
     public List<BulletInfo> bullets;
     [System.Serializable]
     public struct BulletInfo { public int curr, all; }
+    public LayerMask attMask;
 
     public List<int> items;
 
@@ -181,7 +182,22 @@ public class Ppl : MonoBehaviour {
         }
     }
 
-public void Override (Transform t, GameObject r, int id, Interactable i)
+    public void Att(float rad, float dmg, float t = 0, float dist = Mathf.Infinity) {
+        StartCoroutine(DoAtt(rad, dmg, t, dist));
+    }
+
+    IEnumerator DoAtt (float rad, float dmg, float t, float dist) {
+        yield return new WaitForSeconds(t);
+        RaycastHit info;
+        if (Physics.SphereCast(cam.transform.position, rad, cam.transform.forward, out info, dist, attMask.value)) {
+            DmgPart p = info.collider.gameObject.GetComponent<DmgPart>();
+            if (p) {
+                p.Hit(dmg, info);
+            }
+        }
+    }
+
+    public void Override (Transform t, GameObject r, int id, Interactable i)
     {
         StartCoroutine(DoOverride(t, r, id, i));
     }
