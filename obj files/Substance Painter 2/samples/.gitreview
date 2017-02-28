@@ -1,0 +1,8 @@
+[gerrit]
+scheme=ssh
+host=gerrit
+port=29418
+project=substance-4/samples
+defaultbranch=master
+defaultrebase=0
+defaultremote=origin

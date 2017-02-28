@@ -72,6 +72,7 @@ ModelImporter:
     7400008: dx_idle2
     7400010: dx_run
     7400012: dx_attack_move
+    7400014: dx_dmg_front
     9500000: //RootNode
     13700000: Circle
     13700002: d
@@ -429,6 +430,88 @@ ModelImporter:
       takeName: dx_attack_move
       firstFrame: -1
       lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/a1_r_001
+        weight: 1
+      - path: Armature/Bone/a2_r_001
+        weight: 1
+      - path: Armature/Bone/d_0
+        weight: 1
+      - path: Armature/Bone/d_0/a2_l
+        weight: 1
+      - path: Armature/Bone/d_0/a2_l/a1_l
+        weight: 1
+      - path: Armature/Bone/d_0/a2_r
+        weight: 1
+      - path: Armature/Bone/d_0/a2_r/a1_r
+        weight: 1
+      - path: Armature/Bone/d_0/a2_r/a1_r/x
+        weight: 1
+      - path: Armature/Bone/d_0/il
+        weight: 1
+      - path: Armature/Bone/d_0/ir
+        weight: 1
+      - path: Armature/Bone/d_0/l2_l
+        weight: 1
+      - path: Armature/Bone/d_0/l2_l/l1_l
+        weight: 1
+      - path: Armature/Bone/d_0/l2_l/l1_l/t1_l
+        weight: 1
+      - path: Armature/Bone/d_0/l2_l/l1_l/t2_l
+        weight: 1
+      - path: Armature/Bone/d_0/l2_r
+        weight: 1
+      - path: Armature/Bone/d_0/l2_r/l1_r
+        weight: 1
+      - path: Armature/Bone/d_0/l2_r/l1_r/t1_r
+        weight: 1
+      - path: Armature/Bone/d_0/l2_r/l1_r/t2_r
+        weight: 1
+      - path: Armature/Bone/l1_l_001
+        weight: 1
+      - path: Armature/Bone/l1_r_001
+        weight: 1
+      - path: Armature/Bone/l2_l_001
+        weight: 1
+      - path: Armature/Bone/l2_r_001
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: d
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dx_dmg_front
+      takeName: dx_dmg_front
+      firstFrame: -1
+      lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

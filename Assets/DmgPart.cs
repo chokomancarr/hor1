@@ -4,6 +4,8 @@ public class DmgPart : MonoBehaviour {
     EnemyHP scr;
     [Range(0, 1)]
     public float eff;
+    public AudioClip clip;
+    AudioSource src;
 
 	void Start () {
         Transform t = transform;
@@ -13,9 +15,16 @@ public class DmgPart : MonoBehaviour {
         } while (!scr && t);
         if (!scr)
             Debug.LogError("Cannot find EnemyHP for " + transform.name);
+        src = scr.GetComponent<AudioSource>();
 	}
 
     public void Hit(float dmg, RaycastHit info) {
-        scr.Dmg(dmg*eff, transform, info.point, info.normal);
+        if (!scr.die) {
+            scr.Dmg(dmg * eff, transform, info.point, info.normal);
+            if (clip) {
+                src.clip = clip;
+                src.Play();
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.VR;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ public class Ppl : MonoBehaviour {
     public Transform rigPivot;
     public Transform rigItem;
     public Transform camOverrideTr;
+    public Image aimDotTr;
     public int usingWep;
     public bool canChangeWep = true;
     public Weapon wepScr;
@@ -108,6 +110,7 @@ public class Ppl : MonoBehaviour {
                 {
                     wepScr.Fire();
                     anim.Play("Fire", 0, 0);
+                    Att(wepScr.sz, wepScr.dmg, wepScr.delay, wepScr.dst);
                 }
             }
 
@@ -288,13 +291,16 @@ public class Ppl : MonoBehaviour {
         if (inventoryWeps[usingWep] >= 0)
             weps[inventoryWeps[usingWep]].SetActive(false);
         usingWep = i;
-        if (inventoryWeps[usingWep] >= 0)
-        {
+        if (inventoryWeps[usingWep] >= 0) {
             weps[inventoryWeps[usingWep]].SetActive(true);
             wepScr = weps[inventoryWeps[usingWep]].GetComponent<Weapon>();
+            aimDotTr.gameObject.SetActive(true);
+            aimDotTr.sprite = wepScr.aimDot;
         }
-        else
+        else {
             wepScr = null;
+            aimDotTr.gameObject.SetActive(false);
+        }
         anim.SetFloat("wepType", inventoryWeps[usingWep]+1);
         if (show)
             anim.Play("Check", 0, 0);
