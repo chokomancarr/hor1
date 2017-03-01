@@ -26,7 +26,11 @@ public class Ppl : MonoBehaviour {
     
     public List<BulletInfo> bullets;
     [System.Serializable]
-    public struct BulletInfo { public int curr, all; }
+    public class BulletInfo { public int curr, all, sz; }
+    public bool GotBullet(int i) { return bullets[i].curr > 0 || bullets[i].sz <= 0; }
+    public bool UseBullet(int i) { if (bullets[i].sz > 0 && (--bullets[i].curr) <= 0) { Reload(i); return true; } else return false; } //returns isReloaded?
+    public void Reload(int i) { int rm = Mathf.Min(bullets[i].sz, bullets[i].all); bullets[i].all -= rm; bullets[i].curr += rm; }
+
     public LayerMask attMask;
 
     public List<int> items;
@@ -104,12 +108,13 @@ public class Ppl : MonoBehaviour {
             //if (Input.GetKeyDown(InKeys.Key("C")))
             //    crouch = !crouch;
 
-            if ((InKeys.isJoystick ? Input.GetKeyDown(KeyCode.Joystick1Button1) : Input.GetMouseButtonDown(0)) && wepScr)
+            if ((InKeys.isJoystick ? Input.GetKeyDown(KeyCode.Joystick1Button1) : Input.GetMouseButtonDown(0)) && wepScr && GotBullet(inventoryWeps[usingWep]))
             {
                 if (wepScr.canFire)
                 {
                     wepScr.Fire();
                     anim.Play("Fire", 0, 0);
+                    anim.SetFloat("isReload", UseBullet(inventoryWeps[usingWep])? 1 : 0);
                     Att(wepScr.sz, wepScr.dmg, wepScr.delay, wepScr.dst);
                 }
             }
@@ -294,6 +299,7 @@ public class Ppl : MonoBehaviour {
         if (inventoryWeps[usingWep] >= 0) {
             weps[inventoryWeps[usingWep]].SetActive(true);
             wepScr = weps[inventoryWeps[usingWep]].GetComponent<Weapon>();
+            wepScr.Refresh();
             aimDotTr.gameObject.SetActive(true);
             aimDotTr.sprite = wepScr.aimDot;
         }

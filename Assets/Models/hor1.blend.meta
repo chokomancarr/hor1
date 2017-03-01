@@ -78,6 +78,9 @@ ModelImporter:
     100140: Plane_042
     100142: Plane_043
     100144: Plane_044
+    100146: itembox_1
+    100148: itembox_1_cover
+    100150: itembox_1_lock
     400000: barricade1_line
     400002: barricade1_line_001
     400004: barricade1_line_002
@@ -151,6 +154,9 @@ ModelImporter:
     400140: Plane_042
     400142: Plane_043
     400144: Plane_044
+    400146: itembox_1
+    400148: itembox_1_cover
+    400150: itembox_1_lock
     2300000: barricade1_line
     2300002: barricade1_line_001
     2300004: barricade1_line_002
@@ -223,6 +229,9 @@ ModelImporter:
     2300138: Plane_042
     2300140: Plane_043
     2300142: Plane_044
+    2300144: itembox_1
+    2300146: itembox_1_cover
+    2300148: itembox_1_lock
     3300000: barricade1_line
     3300002: barricade1_line_001
     3300004: barricade1_line_002
@@ -295,6 +304,9 @@ ModelImporter:
     3300138: Plane_042
     3300140: Plane_043
     3300142: Plane_044
+    3300144: itembox_1
+    3300146: itembox_1_cover
+    3300148: itembox_1_lock
     4300000: room0_shelf
     4300002: library
     4300004: block_001
@@ -367,6 +379,9 @@ ModelImporter:
     4300138: Plane_039
     4300140: Plane_038
     4300142: Plane_037
+    4300144: itembox_1_lock
+    4300146: itembox_1
+    4300148: itembox_1_cover
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 
 public class ItemDrop : MonoBehaviour {
-    public int type;
-
-    public string msg;
-    public float msgDelay;
-
+    public string desc;
     float dh;
     bool canInter, inView;
     GUIStyle style;
@@ -25,7 +21,7 @@ public class ItemDrop : MonoBehaviour {
             Vector3 p = Ppl.instance.cam.WorldToViewportPoint(transform.position);
             inView = p.z > 0 && p.x > 0 && p.y > 0 && p.x < 1 && p.y < 1;
             if (inView) {
-                HUD.instance.SetF(p);
+                HUD.instance.SetF(p, desc);
             }
         }
     }
@@ -39,21 +35,11 @@ public class ItemDrop : MonoBehaviour {
     {
         if (Input.GetKeyDown(InKeys.Key("F")) && canInter)
         {
-            for (int q = 0; q < 4; q++)
-            {
-                if (Ppl.instance.inventoryWeps[q] == -1)
-                {
-                    Ppl.instance.inventoryWeps[q] = type;
-                    Ppl.instance.UseWep(q, true);
-                    Destroy(gameObject);
-                    if (msg != "")
-                        HUD.instance.Talk(msg, msgDelay);
-                    return;
-                }
-            }
-            print("No free slot!");
+            Do();
         }
     }
+
+    protected virtual void Do () { }
 
     void OnTriggerExit ()
     {

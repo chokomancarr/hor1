@@ -7,6 +7,11 @@ public class DxSpawnDoor : OnE {
         GameObject o = Instantiate(dx, Ppl.instance.transform.position, Ppl.instance.transform.rotation) as GameObject;
         o.transform.Rotate(0, 180, 0);
         o.GetComponent<Animator>().Play("Enter");
+    }
+
+    public override void DoEnd()
+    {
+        GetComponent<Door>().Reset();
         Destroy(this);
     }
 }

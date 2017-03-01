@@ -10,13 +10,19 @@ public class RubberGun : Weapon {
         StartCoroutine(DoFire());
     }
 
+    public override void Refresh()
+    {
+        rubber.SetActive(Ppl.instance.bullets[0].curr > 0);
+        print(Ppl.instance.bullets[0].curr > 0);
+    }
+
     IEnumerator DoFire()
     {
         Ppl.instance.canChangeWep = false;
         canFire = false;
         rubber.SetActive(false);
         yield return new WaitForSeconds(1f);
-        rubber.SetActive(true);
+        if (Ppl.instance.bullets[0].curr > 0) rubber.SetActive(true);
         yield return new WaitForSeconds(0.2f);
         canFire = true;
         Ppl.instance.canChangeWep = true;

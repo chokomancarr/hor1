@@ -58,6 +58,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -69,19 +75,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AmmoDrop.cs" />
     <Compile Include="Assets\BarricadeZombieBreak.cs" />
     <Compile Include="Assets\Cam.cs" />
     <Compile Include="Assets\Clock.cs" />
     <Compile Include="Assets\DieExec.cs" />
+    <Compile Include="Assets\DmgPart.cs" />
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\DoorCloser.cs" />
     <Compile Include="Assets\DxSpawnDoor.cs" />
     <Compile Include="Assets\DyingLight.cs" />
+    <Compile Include="Assets\EnemyHP.cs" />
     <Compile Include="Assets\Exec.cs" />
     <Compile Include="Assets\Flashbacker.cs" />
     <Compile Include="Assets\HUD.cs" />
     <Compile Include="Assets\InKeys.cs" />
+    <Compile Include="Assets\InTypeChangeMat.cs" />
     <Compile Include="Assets\Interactable.cs" />
+    <Compile Include="Assets\ItemBox.cs" />
     <Compile Include="Assets\ItemDrop.cs" />
     <Compile Include="Assets\Manager.cs" />
     <Compile Include="Assets\MoveDistantTrigger.cs" />
@@ -96,6 +107,7 @@
     <Compile Include="Assets\VRUIScaler.cs" />
     <Compile Include="Assets\WallZombieTrigger.cs" />
     <Compile Include="Assets\Weapon.cs" />
+    <Compile Include="Assets\WepDrop.cs" />
     <Compile Include="Assets\Zombie.cs" />
     <Compile Include="Assets\ZombieDeleteTrigger.cs" />
   </ItemGroup>

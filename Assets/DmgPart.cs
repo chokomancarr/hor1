@@ -5,9 +5,9 @@ public class DmgPart : MonoBehaviour {
     [Range(0, 1)]
     public float eff;
     public AudioClip clip;
-    AudioSource src;
+    public AudioSource src;
 
-	void Start () {
+	protected virtual void Start () {
         Transform t = transform;
         do {
             scr = t.GetComponent<EnemyHP>();
@@ -18,7 +18,7 @@ public class DmgPart : MonoBehaviour {
         src = scr.GetComponent<AudioSource>();
 	}
 
-    public void Hit(float dmg, RaycastHit info) {
+    public virtual void Hit(float dmg, RaycastHit info) {
         if (!scr.die) {
             scr.Dmg(dmg * eff, transform, info.point, info.normal);
             if (clip) {

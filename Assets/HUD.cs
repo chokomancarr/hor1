@@ -10,11 +10,17 @@ public class HUD : MonoBehaviour {
     public Camera uiCam;
 
     public RectTransform E, F;
-    public Text ET, FT;
+    public Text ET, ED, FT, FD;
     int Et = -1, Ft = -1;
 
     public RectTransform LT, RB, LT2, RB2; //2 for VR
     public Vector2 lt, rb;
+    
+    void Awake()
+    {
+        if (!instance)
+            instance = this;
+    }
 
     void Start () {
         if (Ppl.instance.vr)
@@ -38,25 +44,19 @@ public class HUD : MonoBehaviour {
         return new Vector2(Mathf.Lerp(lt.x, rb.x, p.x), Mathf.Lerp(rb.y, lt.y, p.y));
     }
 
-    public void SetE (Vector3 p) {
+    public void SetE (Vector3 p, string msg = "") {
         E.gameObject.SetActive(true);
         E.anchoredPosition = CamToCanvas(p);
         ET.text = InKeys.Nm("E");
+        ED.text = msg;
         Et = 1;
     }
-    public void SetF(Vector3 p) {
+    public void SetF(Vector3 p, string msg = "") {
         F.gameObject.SetActive(true);
         F.anchoredPosition = CamToCanvas(p);
         FT.text = InKeys.Nm("F");
+        FD.text = msg;
         Ft = 1;
-    }
-
-    void Awake ()
-    {
-        if (!instance)
-            instance = this;
-
-        Talk("Hello from the other side!");
     }
 
     public void Talk(string m)

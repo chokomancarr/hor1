@@ -8,17 +8,25 @@ public class InKeys : MonoBehaviour {
 
 	void Awake () {
         keys = new Dictionary<string, InKeyPair>();
-        isJoystick = Ppl.instance.vr;
         keys.Add("E", new InKeyPair("E", "▢", KeyCode.E, KeyCode.Joystick1Button0));
         keys.Add("C", new InKeyPair("C", "✕", KeyCode.C, KeyCode.Joystick1Button1));
         keys.Add("F", new InKeyPair("F", "○", KeyCode.F, KeyCode.Joystick1Button2));
         keys.Add("Shift", new InKeyPair("⇑Shift", "L2", KeyCode.LeftShift, KeyCode.Joystick1Button6));
     }
 
-    void Update ()
+    void Start ()
+    {
+        isJoystick = Ppl.instance.vr;
+        Manager.InTypeMatScrDo();
+    }
+
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
+        {
             isJoystick = !isJoystick;
+            Manager.InTypeMatScrDo();
+        }
     }
 
     public static string Nm(string s)

@@ -5,4 +5,5 @@ public class Weapon : MonoBehaviour {
     public float sz, dmg, delay, dst;
     public Sprite aimDot;
     public virtual void Fire() { }
+    public virtual void Refresh() { }
 }
