@@ -8,8 +8,10 @@ public class AmmoDrop : ItemDrop
         Ppl.instance.bullets[id].all += amt;
         if (Ppl.instance.bullets[id].curr <= 0)
             Ppl.instance.Reload(id);
-        if (Ppl.instance.wepScr)
+        if (Ppl.instance.wepScr) {
             Ppl.instance.wepScr.Refresh();
+            HUD.instance.UpdateAmmo();
+        }
         Destroy(gameObject);
     }
 }

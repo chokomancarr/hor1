@@ -13,6 +13,8 @@ public class HUD : MonoBehaviour {
     public Text ET, ED, FT, FD;
     int Et = -1, Ft = -1;
 
+    public Text ammoCurr, ammoAll;
+
     public RectTransform LT, RB, LT2, RB2; //2 for VR
     public Vector2 lt, rb;
     
@@ -57,6 +59,14 @@ public class HUD : MonoBehaviour {
         FT.text = InKeys.Nm("F");
         FD.text = msg;
         Ft = 1;
+    }
+
+    public void UpdateAmmo () {
+        Ppl.BulletInfo i = Ppl.instance.bullets[Ppl.instance.inventoryWeps[Ppl.instance.usingWep]];
+        ammoCurr.text = i.curr.ToString();
+        ammoCurr.color = i.curr > 0 ? Color.green : Color.red;
+        ammoAll.text = i.all.ToString();
+        ammoAll.color = i.all > 0 ? Color.green : Color.red;
     }
 
     public void Talk(string m)

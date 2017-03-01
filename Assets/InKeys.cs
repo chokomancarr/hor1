@@ -12,6 +12,7 @@ public class InKeys : MonoBehaviour {
         keys.Add("C", new InKeyPair("C", "✕", KeyCode.C, KeyCode.Joystick1Button1));
         keys.Add("F", new InKeyPair("F", "○", KeyCode.F, KeyCode.Joystick1Button2));
         keys.Add("Shift", new InKeyPair("⇑Shift", "L2", KeyCode.LeftShift, KeyCode.Joystick1Button6));
+        //keys.Add("Shift", new InKeyPair("⇑Shift", "L2", KeyCode.LeftShift, KeyCode.Joystick1Button6));
     }
 
     void Start ()

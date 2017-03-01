@@ -2,6 +2,7 @@
 
 public class DxSpawnDoor : OnE {
     public GameObject dx;
+    public int afterType;
 	public override void Do5 ()
     {
         GameObject o = Instantiate(dx, Ppl.instance.transform.position, Ppl.instance.transform.rotation) as GameObject;
@@ -11,7 +12,9 @@ public class DxSpawnDoor : OnE {
 
     public override void DoEnd()
     {
-        GetComponent<Door>().Reset();
+        Door d = GetComponent<Door>();
+        d.Reset();
+        d.type = afterType;
         Destroy(this);
     }
 }

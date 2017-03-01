@@ -13,7 +13,6 @@ public class RubberGun : Weapon {
     public override void Refresh()
     {
         rubber.SetActive(Ppl.instance.bullets[0].curr > 0);
-        print(Ppl.instance.bullets[0].curr > 0);
     }
 
     IEnumerator DoFire()

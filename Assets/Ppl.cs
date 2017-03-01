@@ -12,6 +12,7 @@ public class Ppl : MonoBehaviour {
     public Collider col;
     public Animator anim;
     public Camera cam;
+    public Vector3 camFwd;
     public Transform camPivot;
     public Transform rigPivot;
     public Transform rigItem;
@@ -116,18 +117,20 @@ public class Ppl : MonoBehaviour {
                     anim.Play("Fire", 0, 0);
                     anim.SetFloat("isReload", UseBullet(inventoryWeps[usingWep])? 1 : 0);
                     Att(wepScr.sz, wepScr.dmg, wepScr.delay, wepScr.dst);
+                    HUD.instance.UpdateAmmo();
                 }
             }
 
-            if (canChangeWep)
-            {
-                for (int a = 0; a < 4; a++)
-                {
-                    if (a != usingWep && Input.GetKeyDown(KeyCode.Alpha1 + a))
-                    {
-                        UseWep(a, true);
-                        break;
-                    }
+            if (canChangeWep) {
+                float hr = Input.GetAxis("Dpad-Hor");
+                float vr = Input.GetAxis("Dpad-Ver");
+                int a = -1;
+                if (hr != 0)
+                    a = hr > 0 ? 2 : 0;
+                if (vr != 0)
+                    a = vr > 0 ? 1 : 3;
+                if (a > -1 && a != usingWep) {
+                    UseWep(a, true);
                 }
             }
 
@@ -197,7 +200,7 @@ public class Ppl : MonoBehaviour {
     IEnumerator DoAtt (float rad, float dmg, float t, float dist) {
         yield return new WaitForSeconds(t);
         RaycastHit info;
-        if (Physics.SphereCast(cam.transform.position, rad, cam.transform.forward, out info, dist, attMask.value)) {
+        if (Physics.SphereCast(transform.TransformPoint(pvPos), rad, camFwd, out info, dist, attMask.value)) {
             DmgPart p = info.collider.gameObject.GetComponent<DmgPart>();
             if (p) {
                 p.Hit(dmg, info);
@@ -281,8 +284,8 @@ public class Ppl : MonoBehaviour {
             i.Reset();
     }
 
-    public void UseWep (int i, bool show = false)
-    {
+    public void UseWep (int i, bool show = false) {
+        HUD.instance.ammoCurr.gameObject.SetActive(false);
         if (i < 0)
         {
             if (inventoryWeps[usingWep] >= 0)
@@ -299,7 +302,11 @@ public class Ppl : MonoBehaviour {
         if (inventoryWeps[usingWep] >= 0) {
             weps[inventoryWeps[usingWep]].SetActive(true);
             wepScr = weps[inventoryWeps[usingWep]].GetComponent<Weapon>();
-            wepScr.Refresh();
+            if (wepScr) {
+                wepScr.Refresh();
+                HUD.instance.ammoCurr.gameObject.SetActive(bullets[inventoryWeps[usingWep]].sz > 0);
+                HUD.instance.UpdateAmmo();
+            }
             aimDotTr.gameObject.SetActive(true);
             aimDotTr.sprite = wepScr.aimDot;
         }

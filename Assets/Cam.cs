@@ -27,6 +27,7 @@ public class Cam : MonoBehaviour {
 	*/
 	// Update is called once per frame
 	void OnPreRender () {
+        ppl.camFwd = transform.forward;
         if (ppl.vr) {
             ppl.camPivot.transform.localPosition = ppl.pvPos - transform.localPosition;
             uiPivot.transform.localPosition = -uicam.transform.localPosition;
