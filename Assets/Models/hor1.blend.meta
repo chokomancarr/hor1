@@ -81,6 +81,13 @@ ModelImporter:
     100146: itembox_1
     100148: itembox_1_cover
     100150: itembox_1_lock
+    100152: toilet_2
+    100154: Cube_cell_012
+    100156: toilet_2_2
+    100158: toilet_2_sink
+    100160: toilet_2_bowl
+    100162: toilet_2_door
+    100164: toilet_2_matter
     400000: barricade1_line
     400002: barricade1_line_001
     400004: barricade1_line_002
@@ -157,6 +164,13 @@ ModelImporter:
     400146: itembox_1
     400148: itembox_1_cover
     400150: itembox_1_lock
+    400152: toilet_2
+    400154: Cube_cell_012
+    400156: toilet_2_2
+    400158: toilet_2_sink
+    400160: toilet_2_bowl
+    400162: toilet_2_door
+    400164: toilet_2_matter
     2300000: barricade1_line
     2300002: barricade1_line_001
     2300004: barricade1_line_002
@@ -232,6 +246,13 @@ ModelImporter:
     2300144: itembox_1
     2300146: itembox_1_cover
     2300148: itembox_1_lock
+    2300150: toilet_2
+    2300152: Cube_cell_012
+    2300154: toilet_2_2
+    2300156: toilet_2_sink
+    2300158: toilet_2_bowl
+    2300160: toilet_2_door
+    2300162: toilet_2_matter
     3300000: barricade1_line
     3300002: barricade1_line_001
     3300004: barricade1_line_002
@@ -307,6 +328,13 @@ ModelImporter:
     3300144: itembox_1
     3300146: itembox_1_cover
     3300148: itembox_1_lock
+    3300150: toilet_2
+    3300152: Cube_cell_012
+    3300154: toilet_2_2
+    3300156: toilet_2_sink
+    3300158: toilet_2_bowl
+    3300160: toilet_2_door
+    3300162: toilet_2_matter
     4300000: room0_shelf
     4300002: library
     4300004: block_001
@@ -382,6 +410,13 @@ ModelImporter:
     4300144: itembox_1_lock
     4300146: itembox_1
     4300148: itembox_1_cover
+    4300150: toilet_2
+    4300152: Cube_cell_012
+    4300154: toilet_2_sink
+    4300156: toilet_2_2
+    4300158: toilet_2_bowl
+    4300160: toilet_2_matter
+    4300162: toilet_2_door
     7400000: Default Take
     9500000: //RootNode
   materials:
