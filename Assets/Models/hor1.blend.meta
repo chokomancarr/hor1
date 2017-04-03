@@ -88,6 +88,12 @@ ModelImporter:
     100160: toilet_2_bowl
     100162: toilet_2_door
     100164: toilet_2_matter
+    100166: toilet2_mirror
+    100168: corr2_gate
+    100170: corr2_gate_col
+    100172: corr2_gate_door
+    100174: gate_key
+    100176: corr1_temp
     400000: barricade1_line
     400002: barricade1_line_001
     400004: barricade1_line_002
@@ -171,6 +177,12 @@ ModelImporter:
     400160: toilet_2_bowl
     400162: toilet_2_door
     400164: toilet_2_matter
+    400166: toilet2_mirror
+    400168: corr2_gate
+    400170: corr2_gate_col
+    400172: corr2_gate_door
+    400174: gate_key
+    400176: corr1_temp
     2300000: barricade1_line
     2300002: barricade1_line_001
     2300004: barricade1_line_002
@@ -253,6 +265,12 @@ ModelImporter:
     2300158: toilet_2_bowl
     2300160: toilet_2_door
     2300162: toilet_2_matter
+    2300164: toilet2_mirror
+    2300166: corr2_gate
+    2300168: corr2_gate_col
+    2300170: corr2_gate_door
+    2300172: gate_key
+    2300174: corr1_temp
     3300000: barricade1_line
     3300002: barricade1_line_001
     3300004: barricade1_line_002
@@ -335,6 +353,12 @@ ModelImporter:
     3300158: toilet_2_bowl
     3300160: toilet_2_door
     3300162: toilet_2_matter
+    3300164: toilet2_mirror
+    3300166: corr2_gate
+    3300168: corr2_gate_col
+    3300170: corr2_gate_door
+    3300172: gate_key
+    3300174: corr1_temp
     4300000: room0_shelf
     4300002: library
     4300004: block_001
@@ -417,6 +441,12 @@ ModelImporter:
     4300158: toilet_2_bowl
     4300160: toilet_2_matter
     4300162: toilet_2_door
+    4300164: toilet2_mirror
+    4300166: corr2_gate
+    4300168: corr2_gate_door
+    4300170: corr2_gate_col
+    4300172: gate_key
+    4300174: corr1_temp
     7400000: Default Take
     9500000: //RootNode
   materials:

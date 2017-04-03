@@ -72,7 +72,7 @@ public class HUD : MonoBehaviour {
     public void Talk(string m)
     {
         talkUI.text = m;
-        talkTime = 0.07f * m.Length + 2;
+        talkTime = 0.15f * m.Length + 2;
     }
     public void Talk(string m, float d)
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class Door : Interactable {
-    public bool open;
+    public bool open, remCol;
 
     public Vector3 oriPos;
 
@@ -15,7 +15,7 @@ public class Door : Interactable {
     }
 
     protected override void OnDoAction() {
-        rep.GetComponent<Collider>().enabled = false;
+		if (!remCol) rep.GetComponent<Collider>().enabled = false;
         open = true;
     }
 

@@ -21,7 +21,7 @@ public class Ppl : MonoBehaviour {
     public int usingWep;
     public bool canChangeWep = true;
     public Weapon wepScr;
-    public GameObject[] weps;
+    public GameObject[] weps, items;
 
     public int[] inventoryWeps;
     
@@ -34,7 +34,7 @@ public class Ppl : MonoBehaviour {
 
     public LayerMask attMask;
 
-    public List<int> items;
+	public List<ItemType> inventoryItems;
 
     public Vector3 pvPos;
     public float preOverride;
@@ -232,18 +232,21 @@ public class Ppl : MonoBehaviour {
         targets[id].o.SetActive(true);
         UseWep(-1);
         bool gotWep = false;
-        if (targets[id].wep > -1)
-        {
-            foreach (int w in inventoryWeps)
-            {
-                if (w == targets[id].wep)
-                {
-                    weps[targets[id].wep].SetActive(true);
-                    gotWep = true;
-                    break;
-                }
-            }
-        }
+		if (targets [id].wep > -1) {
+			foreach (int w in inventoryWeps) {
+				if (w == targets [id].wep) {
+					weps [targets [id].wep].SetActive (true);
+					gotWep = true;
+					break;
+				}
+			}
+		}
+		else if (targets [id].item != ItemType.Undefined) {
+			if (inventoryItems.Contains (targets [id].item)) {
+				items [(int)targets [id].item].SetActive (true);
+				gotWep = true;
+			}
+		}
         else gotWep = true;
         aud.Action(id, gotWep);
         anim.SetFloat("actionType", gotWep? id : id + 50);
@@ -255,6 +258,9 @@ public class Ppl : MonoBehaviour {
         {
             weps[targets[id].wep].SetActive(false);
         }
+		if (targets [id].item != ItemType.Undefined && gotWep) {
+			items [(int)targets [id].item].SetActive (false);
+		}
         overrideReplace.transform.position = targets[id].o.transform.position;
         overrideReplace.transform.rotation = targets[id].o.transform.rotation;
         overrideReplace.SetActive(true);
@@ -273,12 +279,7 @@ public class Ppl : MonoBehaviour {
         if (!gotWep)
         {
             i.Reset();
-            switch (id)
-            {
-                case 2:
-                    HUD.instance.Talk("I might be able to prise it open with something.");
-                    break;
-            }
+			HUD.instance.Talk(targets[id].noWepTalk);
         }
         else if (targets[id].res)
             i.Reset();
@@ -328,8 +329,10 @@ public class OverrideTarget
 {
     public GameObject o;
     public AnimationClip clip;
-    public int wep;
+	public int wep;
+	public ItemType item = ItemType.Undefined;
     public AnimationClip noWepClip;
+	public string noWepTalk, noItemTalk;
     public Vector3 off;
     public bool res;
 }

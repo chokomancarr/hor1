@@ -60,6 +60,10 @@ ModelImporter:
     100104: Plane_003
     100106: knife
     100108: Plane_004
+    100110: corr2_gate_door
+    100112: corr2_gate_door_001
+    100114: gate_key
+    100116: body_shad
     400000: Cube
     400002: Plane
     400004: //RootNode
@@ -115,16 +119,24 @@ ModelImporter:
     400104: Plane_003
     400106: knife
     400108: Plane_004
+    400110: corr2_gate_door
+    400112: corr2_gate_door_001
+    400114: gate_key
+    400116: body_shad
     2300000: Cube
     2300002: Plane
     2300004: //RootNode
     2300006: Plane_002
     2300008: Plane_003
+    2300010: corr2_gate_door
+    2300012: body_shad
     3300000: Cube
     3300002: Plane
     3300004: //RootNode
     3300006: Plane_002
     3300008: Plane_003
+    3300010: corr2_gate_door
+    3300012: body_shad
     4300000: Cube
     4300002: Plane
     4300004: Plane_002
@@ -132,6 +144,10 @@ ModelImporter:
     4300008: Plane_003
     4300010: knife
     4300012: Plane_004
+    4300014: corr2_gate_door_001
+    4300016: corr2_gate_door
+    4300018: gate_key
+    4300020: body_shad
     7400000: Default Take
     7400002: checkhands1
     7400004: opendoor_r
@@ -146,6 +162,7 @@ ModelImporter:
     7400022: stuckdoor_r
     7400024: opendoor_l_dx
     7400026: swissknife_fire
+    7400028: opengate_l
     9500000: //RootNode
     13700000: Plane
     13700002: Plane_002
@@ -153,6 +170,8 @@ ModelImporter:
     13700006: Plane_003
     13700008: knife
     13700010: Plane_004
+    13700012: corr2_gate_door_001
+    13700014: gate_key
   materials:
     importMaterials: 1
     materialName: 0
@@ -287,6 +306,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -414,6 +439,12 @@ ModelImporter:
       - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
         weight: 1
       - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
         weight: 1
       - path: knife
         weight: 1
@@ -543,6 +574,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -670,6 +707,12 @@ ModelImporter:
       - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
         weight: 1
       - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
         weight: 1
       - path: knife
         weight: 1
@@ -799,6 +842,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -927,6 +976,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -946,7 +1001,7 @@ ModelImporter:
       name: rubbergun_fire
       takeName: rubbergun_fire
       firstFrame: -1
-      lastFrame: 39
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1054,6 +1109,12 @@ ModelImporter:
       - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
         weight: 1
       - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
         weight: 1
       - path: knife
         weight: 1
@@ -1183,6 +1244,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -1310,6 +1377,12 @@ ModelImporter:
       - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
         weight: 1
       - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
         weight: 1
       - path: knife
         weight: 1
@@ -1439,6 +1512,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -1566,6 +1645,12 @@ ModelImporter:
       - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
         weight: 1
       - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
         weight: 1
       - path: knife
         weight: 1
@@ -1695,6 +1780,12 @@ ModelImporter:
         weight: 1
       - path: Armature/Bone/pivot/cambone
         weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
       - path: knife
         weight: 1
       - path: Plane
@@ -1822,6 +1913,146 @@ ModelImporter:
       - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
         weight: 1
       - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
+        weight: 1
+      - path: knife
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Plane_001
+        weight: 1
+      - path: Plane_002
+        weight: 1
+      - path: Plane_003
+        weight: 1
+      - path: Plane_004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: opengate_l
+      takeName: opengate_l
+      firstFrame: -1
+      lastFrame: 264
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/item
+        weight: 1
+      - path: Armature/Bone/pivot
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_007
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_007/Bone_008
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_007/Bone_008/Bone_009
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_010
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_010/Bone_011
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_010/Bone_011/Bone_012
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_013
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_013/Bone_014
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_013/Bone_014/Bone_015
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_031
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_031/Bone_032
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/Bone_031/Bone_032/Bone_033
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_001/Bone_002/Bone_003/wep_l
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_019
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_019/Bone_020/Bone_021
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_022
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_022/Bone_023
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_022/Bone_023/Bone_024
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_025
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_025/Bone_026
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_025/Bone_026/Bone_027
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_028
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_028/Bone_029
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_028/Bone_029/Bone_030
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_034
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_034/Bone_035
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/Bone_034/Bone_035/Bone_036
+        weight: 1
+      - path: Armature/Bone/pivot/Bone_016/Bone_017/Bone_018/wep_r
+        weight: 1
+      - path: Armature/Bone/pivot/cambone
+        weight: 1
+      - path: corr2_gate_door
+        weight: 1
+      - path: corr2_gate_door_001
+        weight: 1
+      - path: gate_key
         weight: 1
       - path: knife
         weight: 1

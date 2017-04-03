@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Interactable : MonoBehaviour {
     public GameObject rep;
@@ -34,10 +35,19 @@ public class Interactable : MonoBehaviour {
         {
             col.enabled = false;
             canInter = false;
-            OnDoAction();
-            Ppl.instance.Override(transform, rep, type, this);
+			if (Ppl.instance.targets [type].item == ItemType.Undefined || Ppl.instance.inventoryItems.Contains (Ppl.instance.targets [type].item)) {
+				OnDoAction ();
+				Ppl.instance.Override (transform, rep, type, this);
+			}
+			else StartCoroutine (NeedItem(Ppl.instance.targets [type].noItemTalk));
         }
     }
+
+	IEnumerator NeedItem (string s) {
+		HUD.instance.Talk (s);
+		yield return new WaitForSeconds (3);
+		Reset ();
+	}
 
     void PreRend ()
     {
