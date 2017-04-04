@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: ed755e59823949542bb96187a977e091
+timeCreated: 1491224123
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Plane
+    100004: Plane_001
+    100006: Plane_002
+    100008: Plane_003
+    100010: aik
+    100012: aik2
+    100014: arm1
+    100016: arm1_001
+    100018: arm2
+    100020: arm2_001
+    100022: Armature
+    100024: body1
+    100026: body2
+    100028: Bone
+    100030: Bone_008
+    100032: Bone_009
+    100034: f1
+    100036: f1_001
+    100038: f2
+    100040: f2_001
+    100042: f3
+    100044: f3_001
+    100046: f4
+    100048: f4_001
+    100050: f5
+    100052: f5_001
+    100054: fik
+    100056: fik2
+    100058: foot
+    100060: foot_001
+    100062: head
+    100064: hik
+    100066: hik2
+    100068: leg1
+    100070: leg1_001
+    100072: leg2
+    100074: leg2_001
+    100076: lik
+    100078: lik2
+    100080: neck
+    100082: shd
+    100084: shd_001
+    100086: skirt1
+    100088: skirt11
+    100090: skirt2
+    100092: skirt22
+    100094: skirt_3
+    400000: //RootNode
+    400002: Plane
+    400004: Plane_001
+    400006: Plane_002
+    400008: Plane_003
+    400010: aik
+    400012: aik2
+    400014: arm1
+    400016: arm1_001
+    400018: arm2
+    400020: arm2_001
+    400022: Armature
+    400024: body1
+    400026: body2
+    400028: Bone
+    400030: Bone_008
+    400032: Bone_009
+    400034: f1
+    400036: f1_001
+    400038: f2
+    400040: f2_001
+    400042: f3
+    400044: f3_001
+    400046: f4
+    400048: f4_001
+    400050: f5
+    400052: f5_001
+    400054: fik
+    400056: fik2
+    400058: foot
+    400060: foot_001
+    400062: head
+    400064: hik
+    400066: hik2
+    400068: leg1
+    400070: leg1_001
+    400072: leg2
+    400074: leg2_001
+    400076: lik
+    400078: lik2
+    400080: neck
+    400082: shd
+    400084: shd_001
+    400086: skirt1
+    400088: skirt11
+    400090: skirt2
+    400092: skirt22
+    400094: skirt_3
+    2300000: Plane
+    2300002: Plane_001
+    2300004: Plane_002
+    2300006: Plane_003
+    3300000: Plane
+    3300002: Plane_001
+    3300004: Plane_002
+    3300006: Plane_003
+    4300000: Plane_003
+    4300002: Plane_002
+    4300004: Plane_001
+    4300006: Plane
+    7400000: Default Take
+    7400002: pose1
+    9500000: //RootNode
+    13700000: Plane
+    13700002: Plane_001
+    13700004: Plane_003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

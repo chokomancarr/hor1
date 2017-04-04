@@ -69,6 +69,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SBS.cs" />
     <Compile Include="Assets\Scripts\AmmoDrop.cs" />
     <Compile Include="Assets\Scripts\BarricadeZombieBreak.cs" />
     <Compile Include="Assets\Scripts\Cam.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\Scripts\SwissKnife.cs" />
     <Compile Include="Assets\Scripts\TalkTrigger.cs" />
     <Compile Include="Assets\Scripts\TalkTrigger1.cs" />
+    <Compile Include="Assets\Scripts\TrueItemDrop.cs" />
     <Compile Include="Assets\Scripts\VRUIScaler.cs" />
     <Compile Include="Assets\Scripts\WallZombieTrigger.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
@@ -106,6 +108,8 @@
     <Compile Include="Assets\Scripts\ZombieDeleteTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\SBS_L.shader" />
+    <None Include="Assets\SBS_R.shader" />
     <None Include="Assets\Standard Assets\Effects\DOF.shader" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
@@ -188,6 +192,7 @@
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
     <None Include="Assets\Standard Assets\StandardSpecular.shader" />
+    <None Include="Assets\Standard Assets\StandardSpecular2.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
